@@ -1,0 +1,23 @@
+package br.com.rodrigo.ponto.api.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+@Entity
+public class Localidade {
+
+    @Id
+    @GeneratedValue
+    private  long id;
+    @ManyToOne
+    private NivelAcesso nivelAcesso;
+    private String descricao;
+    
+}
